@@ -2,14 +2,13 @@
 
 /* Replace the following constants */
 
-define('MAIL_HOST', '{imap.googlemail.com:993/imap/ssl}INBOX'); // Change if not using Gmail
-define('MAIL_USER', 'user@somemail.com'); // IMAP username/login, usually an email
-define('MAIL_PASS', 'mypassword');
+define('MAIL_HOST', '{imap.mail.eu-west-1.awsapps.com:993/imap/ssl}INBOX'); // Change if not using WorkMail
+define('MAIL_USER', ''); // IMAP username/login, usually an email
+define('MAIL_PASS', '');
 define('SALT_KEY', 'abcd1234'); // Make this longer and more unique!
-define('SLACK_URL', 'https://hooks.slack.com/someURL'); // Paste your slack hook URL here
-define('SLACK_USERNAME', 'email2slack'); // Set a username for the Slack message
-define('SLACK_CHANNEL', '#general'); // Define the channel this will post in. MUST include #hashtag
-define('SLACK_ICON_EMOJI', ':email:'); // Set an icon for the Slack message
-define('HOSTED_LOCATION', 'https://your.website/subdir/'); // MUST include forward slash at the end. This should point to your view.php file.
+define('SLACK_URL', ''); // Paste your slack hook URL here
+define('SLACK_USERNAME', ''); // Set a username for the Slack message
+define('SLACK_ICON_EMOJI', ':imp:'); // Set an icon for the Slack message
+$featured = array('' => ''); // email => @slack_account
 
 ?>
