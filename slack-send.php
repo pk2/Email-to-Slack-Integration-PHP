@@ -1,14 +1,14 @@
 <?php
 
-function slacksend($text) {
+function slacksend($to, $text) {
   $data = json_encode(array(
     "username"      =>  SLACK_USERNAME,
-    "channel"       =>  SLACK_CHANNEL,
+    "channel"       =>  $to,
     "text"          =>  $text,
     "icon_emoji"    =>  SLACK_ICON_EMOJI
   ));
 
-  $ch = curl_init("SLACK_URL");
+  $ch = curl_init(SLACK_URL);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
   curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
