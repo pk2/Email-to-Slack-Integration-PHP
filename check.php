@@ -23,10 +23,8 @@ foreach ($result as $overview) {
             $to = $value;
         }
     }
-    if(stristr($subject, "SONARQUBE")) {
-       slacksend($to, $text);
-       imap_setflag_full($mailbox, $overview->msgno, "\\Seen");
-    }
+    slacksend($to, $text);
+    imap_setflag_full($mailbox, $overview->msgno, "\\Seen");
   }
 }
 
